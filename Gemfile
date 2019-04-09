@@ -21,6 +21,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'bullet'
   gem 'rubocop', require: false
+  gem 'overcommit'
 end
 
 group :test do
