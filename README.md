@@ -2,7 +2,7 @@
 
 ### Required software
 
-* Ruby version 2.5.2
+* Ruby version 2.5.
 
 ### Database setup
 
