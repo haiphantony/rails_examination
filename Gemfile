@@ -22,6 +22,7 @@ group :development do
   gem 'bullet'
   gem 'rubocop', require: false
   gem 'overcommit'
+  gem 'foreman'
 end
 
 group :test do
