@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
- RSpec.configure do |config|
+# frozen_string_literal: true
+
+RSpec.configure do |config|
   config.before(:each) do |example|
     if example.metadata[:type] == :system
       # NOTE: See more https://medium.com/table-xi/a-quick-guide-to-rails-system-tests-in-rspec-b6e9e8a8b5f6

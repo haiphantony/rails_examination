@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -12,7 +14,7 @@ gem 'slim-rails'
 gem 'webpacker'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'bundler-audit', require: false
@@ -23,7 +25,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'bullet'
-  gem 'rubocop', require: false
+  gem 'rubocop', '0.55.0', require: false
   gem 'overcommit'
   gem 'foreman'
   gem 'scss_lint', require: false
@@ -36,4 +38,4 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem "bootsnap", require: false
+gem 'bootsnap', require: false

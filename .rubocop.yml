@@ -5,11 +5,17 @@ AllCops:
     - config.ru
     - config/initializer/*
   Exclude:
-    - db/**/*
-    - bin/*
+    - bin/**/*
     - config/**/*
+    - db/**/*
+    - lib/tasks/**/*
+    - node_modules/**/*
     - vendor/**/*
-    - lib/tasks/dev.rake
+    - tmp/**/*
+    - spec/fixtures/**/*
+    - script/**/*
+    - Gemfile
+    - Gemfile.lock
 Bundler/OrderedGems:
   Exclude:
     - Gemfile
