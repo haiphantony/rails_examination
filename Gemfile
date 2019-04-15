@@ -14,6 +14,9 @@ gem 'slim-rails'
 gem 'webpacker'
 gem 'bootstrap', '~> 4.0.0'
 gem 'seedbank'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

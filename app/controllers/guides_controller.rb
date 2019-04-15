@@ -3,7 +3,7 @@
 class GuidesController < ApplicationController
   def index
     @guide_search_form = GuideSearchForm.new search_params
-    @guides = @guide_search_form.search
+    @guides = @guide_search_form.search.page(params[:page]).per(10)
   end
 
   private
