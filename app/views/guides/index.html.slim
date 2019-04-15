@@ -1,0 +1,28 @@
+.row.mb-40
+  h6 Guide
+  .col-sm-12
+    = form_for @guide_search_form, url: guides_path, method: :get do |f|
+      .form-group.col-md-4
+        = f.label 'Language: '
+        = f.select(:language_id, Language.pluck(:code, :id),
+            include_blank: '-------', class: 'form-control')
+      .form-group.col-md-4
+        = f.label 'Activity: '
+        = f.select(:activity_id, Activity.pluck(:name, :id),
+            include_blank: '-------', class: 'form-control')
+      .form-group.col-md-4
+        = f.submit 'Search', class: 'btn btn-success mL-20'
+.row
+  .col-sm-12
+    table.table.table-hover.table-bordered
+      thead
+        tr
+          th guid
+          th languages
+          th activities
+      tbody
+        - @guides.each do |guide|
+          tr
+            td = guide.email
+            td = guide.languages.pluck(:code).join(',')
+            td = guide.activities.pluck(:name).join(',')

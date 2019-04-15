@@ -2,10 +2,21 @@ doctype html
 html
   head
     title
-      | ExerciseForTest
+      | exam
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   body
-    = yield
+    header.navbar
+    .container-fluid
+      .row.content
+        .col-sm-3.sidenav
+          h4
+            | Rails Examination
+          ul.nav.nav-pills.nav-stacked
+            li.active
+              a[href="#{guides_path}"]
+                | Guides
+        .col-sm-9
+          = yield
