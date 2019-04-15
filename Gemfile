@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'slim-rails'
 gem 'webpacker'
 gem 'bootstrap', '~> 4.0.0'
+gem 'seedbank'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
