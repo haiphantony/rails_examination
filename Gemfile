@@ -12,6 +12,11 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'slim-rails'
 gem 'webpacker'
+gem 'bootstrap', '~> 4.0.0'
+gem 'seedbank'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'bootstrap4-kaminari-views'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -19,6 +24,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'bundler-audit', require: false
   gem 'brakeman', require: false
+  gem 'faker'
 end
 
 group :development do
