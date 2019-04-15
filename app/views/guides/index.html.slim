@@ -20,12 +20,16 @@
           th guid
           th languages
           th activities
+          th action
       tbody
         - @guides.each do |guide|
           tr
             td = guide.email
             td = guide.languages.pluck(:code).join(',')
             td = guide.activities.pluck(:name).join(',')
+            td
+              a href="#{guide_path(guide)}"
+                |Review
 .row
   .col-sm-12
     = paginate @guides, theme: 'twitter-bootstrap-4'
