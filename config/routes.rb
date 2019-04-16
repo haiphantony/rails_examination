@@ -3,4 +3,11 @@ Rails.application.routes.draw do
   root to: 'guides#index'
   resources :guides, only: [:index, :show]
   resources :reviews, only:[:create, :destroy]
+
+  # api
+  namespace :api do
+    namespace :v1 do
+      resources :guides, only:[:show]
+    end
+  end
 end
