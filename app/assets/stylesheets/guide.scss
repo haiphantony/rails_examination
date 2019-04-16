@@ -1,0 +1,32 @@
+$orange: #ffa500;
+$red: #ff0;
+$grey: #ccc;
+
+.checked {
+  color: $orange;
+}
+
+.error {
+  color: $red;
+}
+
+.reviews {
+  list-style: none;
+  width: 80%;
+
+  li {
+    border-bottom: 1px solid $grey;
+    padding: 10px 0;
+    position: relative;
+
+    button {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+  }
+
+  li:last-child {
+    border-bottom: 0;
+  }
+}
