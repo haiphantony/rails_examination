@@ -1,0 +1,6 @@
+|
+  window.AjaxPath = {}
+  AjaxPath.create_review_path = "#{Rails.application.routes.url_helpers.reviews_path}";
+  AjaxPath.destroy_review_path = (id) => {
+    return "#{Rails.application.routes.url_helpers.review_path('id')}".replace('id', id);
+  }
