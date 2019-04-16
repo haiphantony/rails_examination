@@ -20,6 +20,7 @@ gem 'bootstrap4-kaminari-views'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'active_model_serializers'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -27,7 +28,6 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'bundler-audit', require: false
   gem 'brakeman', require: false
-  gem 'faker'
 end
 
 group :development do
@@ -39,6 +39,15 @@ group :development do
   gem 'foreman'
   gem 'scss_lint', require: false
   gem 'slim_lint', require: false
+  gem 'capistrano'
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-nvm'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rails-db'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-secrets-yml'
+  gem 'capistrano-yarn'
+  gem 'capistrano3-puma'
 end
 
 group :test do
